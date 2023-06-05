@@ -5,7 +5,8 @@ s3files=`aws s3 ls ${1} | awk '{if ($4) print $4}'`
 i=0
 for file in $s3files; do
     echo "JOB  ${i} from-s3.submit"
-    echo "VARS ${i} from_s3=\"${file}\""
+    echo "VARS ${i} s3_file_name=\"${file}\""
+    echo "VARS ${i} s3_bucket_name=\"$1\""
     echo
 
     i=$((i+1))
