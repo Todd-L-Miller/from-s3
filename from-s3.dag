@@ -1,0 +1,5 @@
+JOB fetch-s3-file-names fetch.submit
+
+SUBDAG EXTERNAL job-per-file from-s3.sub.dag
+
+PARENT fetch-s3-file-names CHILD job-per-file

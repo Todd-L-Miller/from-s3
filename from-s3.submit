@@ -1,0 +1,11 @@
+universe    = vanilla
+executable  = from-s3.sh
+arguments   = $(from_s3)
+
+should_transfer_files = true
+
+output      = from-s3.$(CLUSTER).out
+error       = from-s3.$(CLUSTER).err
+log         = from-s3.log
+
+queue 1

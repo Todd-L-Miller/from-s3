@@ -1,0 +1,10 @@
+universe = local
+
+executable          = fetch-s3-file-names
+arguments           = aws-chtc-development-3
+transfer_executable = false
+output              = fetch-s3-file-names.out
+error               = fetch-s3-file-names.err
+log                 = fetch-s3-file-names.log
+
+queue 1
